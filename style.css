@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header, footer{
+    min-height: 15vh;
+    background-color: #252525;
+}
+
+main{
+    display: grid;
+    grid-template-columns:1fr 6fr 4fr 1fr;
+    grid-template-areas: ". hero form .";
+    min-height: 70vh;
+    background-color:#99d3ff;
+    background-image:
+    radial-gradient(at 71% 95%, hsla(286,85%,60%,1) 0px, transparent 50%),
+    radial-gradient(at 66% 91%, hsla(83,94%,78%,1) 0px, transparent 50%),
+    radial-gradient(at 60% 71%, hsla(129,86%,66%,1) 0px, transparent 50%),
+    radial-gradient(at 38% 80%, hsla(149,99%,76%,1) 0px, transparent 50%),
+    radial-gradient(at 86% 4%, hsla(302,84%,75%,1) 0px, transparent 50%),
+    radial-gradient(at 10% 67%, hsla(233,79%,66%,1) 0px, transparent 50%),
+    radial-gradient(at 3% 42%, hsla(203,98%,74%,1) 0px, transparent 50%);
+}
+
+#hero{
+    grid-area: hero;
+    display: grid;
+    justify-content: left;
+    align-content: center;
+    color: white;
+}
+
+#hero > h1 {
+    font-size: 4vw;
+}
+
+#login{
+    grid-area: form;
+    background-color: white;
+    box-shadow: 10px 0 10px rgba(0,0,0,.1),  -10px 0 10px rgba(0,0,0,.1);
+}
+
+input[type=text], input[type=password], button{
+    display: block;
+    margin: 12px;
+    width: calc(100% - 24px);
+    height: 48px;
+    padding: 12px;
+}
+
+.success{
+    color: green;
+    font-size: 3vw;
+    width: 80%;
+    padding: 12px;
+    margin: 0 auto;
+    aspect-ratio: 1/1;
+}
+
+.hide{
+    display:none;
+}
